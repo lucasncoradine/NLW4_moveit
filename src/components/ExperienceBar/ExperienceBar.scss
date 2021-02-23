@@ -1,0 +1,43 @@
+@import "../../styles/system.scss";
+
+#expBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+
+    .init-value,
+    .current-value,
+    .final-value {
+        font-size: 14px;
+        color: $text;
+        white-space: nowrap;
+    }
+
+    .bar {
+        position: relative;
+        width: 100%;
+        margin: 0 24px;
+
+        .bar-bg {
+            border-radius: 100px;
+            width: 100%;
+            height: 4px;
+            background-color: $grey-line;
+        }
+
+        .bar-fill {
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            height: 4px;
+            background-color: $green;
+            @include transition(width, .5s, ease-in-out)
+        }
+
+        .current-value {
+            margin-top: 0.4rem;
+            position: absolute;
+        }
+    }
+}

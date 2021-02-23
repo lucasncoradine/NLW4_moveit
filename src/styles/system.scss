@@ -1,0 +1,21 @@
+@import "./variables";
+@import "./animation";
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $background;    
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+#root,
+.App {
+    height: 100%;
+}

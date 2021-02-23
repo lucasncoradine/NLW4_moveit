@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+#userInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .user-avatar {
+        border-radius: 100px;
+        width: 88px;
+        height: 88px;
+
+        img {
+            border-radius: 100px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            -o-object-fit: cover;
+        }
+    }
+
+    .user-description {
+        margin-left: 23px;
+
+        .user-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: $titulo;
+        }
+        
+        .user-level {
+            font-size: 16px;
+            color: $text;
+            margin-top: 8px;
+            
+            img {
+                margin-right: 9px;
+            }
+        }
+    }
+}

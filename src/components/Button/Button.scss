@@ -1,0 +1,39 @@
+@import "../../styles/system.scss";
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 28px;
+    border: none;
+    border-radius: $border-radius;
+    outline: none;
+    cursor: pointer;
+
+    &.start {
+        background-color: $blue;
+        color: $white;
+
+        &:hover {
+            background-color: $blue-dark;
+        } 
+    }
+
+    &.cancel {
+        background-color: $white;
+        color: $text;
+
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
+    }
+
+    img {
+        margin-left: 8px;
+    }
+}
