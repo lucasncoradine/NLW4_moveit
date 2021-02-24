@@ -1,0 +1,33 @@
+@import '../../styles/system.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 29rem;
+    height: 32rem;
+    background-color: $white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 1.5rem 3.5rem;
+
+    & > div {
+        width: 100%;
+    }
+
+    .card-header {
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        color: $blue;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $grey-line;
+    }
+}
+
+@include for-phone-only {
+    .card {
+        width: 100%;
+    }
+}

@@ -7,7 +7,8 @@ interface ExperienceBarProps {
 
 const ExperienceBar: React.FC<ExperienceBarProps> = () => {
     const user = useUserContext();
-    const fillValue = `${(user.level.currentExp / user.level.finalExp) * 100}%`;
+    const fillNumber = (user.level.currentExp / user.level.finalExp) * 100;
+    const fillValue = `${fillNumber <= 100 ? fillNumber : 100}%`;
 
     return (
         <div id="expBar">

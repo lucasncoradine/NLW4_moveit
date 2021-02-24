@@ -5,25 +5,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 100%;
     font-size: 20px;
     font-weight: 600;
+    font-family: "Inter";
     padding: 0 28px;
     border: none;
     border-radius: $border-radius;
     outline: none;
     cursor: pointer;
 
-    &.start {
+    &.info {
         background-color: $blue;
         color: $white;
 
         &:hover {
             background-color: $blue-dark;
-        } 
+        }
     }
 
-    &.cancel {
+    &.default {
         background-color: $white;
         color: $text;
 
@@ -33,7 +34,56 @@
         }
     }
 
+    &.success {
+        background-color: $green;
+        color: $white;
+
+        &:hover {
+            background-color: $green-dark;
+        }
+    }
+
+    &.cancel {
+        background-color: $red;
+        color: $white;
+
+        &:hover {
+            background-color: $red-dark;
+        }
+    }
+
+    &.completed {
+        background-color: $white;
+        color: $text;
+        cursor: default;
+
+        &:hover {
+            pointer-events: none;
+
+            img {
+                filter: none;
+                -webkit-filter: none;
+            }
+        }
+    }
+
+    &.twitter {
+        background-color: $blue-twitter;
+        color: $white;
+
+        &:hover {
+            background-color: $blue-twitter-dark;   
+        }
+    }
+
     img {
         margin-left: 8px;
+    }
+
+    &:hover {
+        img {
+            filter: brightness(0) invert(1);
+            -webkit-filter: brightness(0) invert(1);
+        }
     }
 }

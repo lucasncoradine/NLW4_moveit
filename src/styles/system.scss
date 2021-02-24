@@ -1,21 +1,28 @@
 @import "./variables";
 @import "./animation";
+@import "./media";
 
 html {
     height: 100%;
     width: 100%;
+    font-family: "Inter";
 }
 
 body {
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color: $background;    
-    font-family: "Inter";
+    background-color: $background;
     font-weight: 400;
 }
 
 #root,
 .App {
     height: 100%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }

@@ -28,16 +28,42 @@
 
         .bar-fill {
             border-radius: 100px;
+            max-width: 100%;
             position: absolute;
             top: 0;
             height: 4px;
             background-color: $green;
-            @include transition(width, .5s, ease-in-out)
+            @include transition(width, 0.5s, ease-in-out);
         }
 
         .current-value {
             margin-top: 0.4rem;
             position: absolute;
+            @include transition(left, 0.5s, ease-in-out);
+        }
+    }
+}
+
+@include for-phone-only {
+    #expBar {
+        padding-top: 0;
+
+        .init-value,
+        .current-value,
+        .final-value {
+            font-size: 16px;
+        }
+
+        .bar {
+            margin: 0 16px;
+
+            .bar-bg {
+                height: 6px;
+            }
+
+            .bar-fill {
+                height: 6px;
+            }
         }
     }
 }

@@ -5,9 +5,21 @@ $text: #666666;
 $text-highlight: #b3b9ff;
 $titulo: #2E384D;
 $red: #e83f5b;
+$red-dark: #ce3b53;
 $green: #4cd62b;
+$green-dark: #42be23;
 $blue: #5965e0;
 $blue-dark: #4953b8;
 $blue-twitter: #2aa9e0;
+$blue-twitter-dark: #2a98c7;
 
 $border-radius: 5px;
+
+$box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
+
+//Media Breakpoints
+$bp-big-desktop: 1800px;
+$bp-desktop: 1200px;
+$bp-tablet-landscape: 900px;
+$bp-tablet: 797px;
+$bp-phone: 599px;

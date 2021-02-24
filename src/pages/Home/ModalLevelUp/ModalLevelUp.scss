@@ -1,0 +1,44 @@
+@import '../../../styles/system.scss';
+
+#cardLevelUp {
+    .card-level-up-body {
+        .level-image {
+            display: flex;
+            justify-content: center;
+            background: url('../../../assets/illustrations/level-up-bg.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+
+            span {
+                text-align: center;
+                font-weight: 600;
+                font-size: 140px;
+                line-height: 100px;
+                color: $blue;
+                text-shadow: 0px 10px 16px rgba(89, 101, 224, 0.3);
+            }
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 1.5rem;
+
+            .title {
+                font-weight: 600;
+                font-size: 30px;
+                color: $titulo;
+            }
+
+            p {
+                margin: 0;
+                color: $text;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .card-level-up-footer {
+        margin-top: 3rem;
+        height: 50px;
+    }
+}

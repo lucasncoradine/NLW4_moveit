@@ -1,6 +1,5 @@
 import React from 'react';
 import { useUserContext } from '../../contexts/UserContext';
-import { zeroPad } from '../../utils/Utils';
 import './CompleteChallenge.scss';
 
 interface CompleteChallengeProps {
@@ -13,7 +12,7 @@ const CompleteChallenge: React.FC<CompleteChallengeProps> = () => {
     return (
         <div id="completeChallenge">
             <span>Desafios completos</span>
-            <span>{zeroPad(user.completeChallenges)}</span>
+            <span>{user.completeChallenges !== 0 ? user.completeChallenges : 'Nenhum'}</span>
         </div>
     );
 };

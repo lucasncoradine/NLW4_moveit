@@ -17,7 +17,7 @@ const UserInfo: React.FC<UserInfoProps> = () => {
             </div>
 
             <div className="user-description">
-                <div className="user-name">{user.name}</div>
+                <div className="user-name">{user.name} {user.lastName}</div>
 
                 <div className="user-level">
                     <img src={iconLevel} alt="Level" />

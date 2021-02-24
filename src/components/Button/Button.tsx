@@ -1,31 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Button.scss';
-import angleRight from '../../assets/icons/angle_right.svg';
-import cancelIcon from '../../assets/icons/cancel.svg';
-import cancelIconWhite from '../../assets/icons/cancel-white.svg';
 
-type Theme = 'cancel' | 'start';
+export type Theme = 'default' | 'info' | 'completed' | 'cancel' | 'success' | 'twitter';
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     text?: string,
     next?: boolean,
     cancel?: boolean,
-    theme?: Theme
+    theme?: Theme,
+    icon?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ children, text, theme = "start", next = false, ...buttonProps }) => {
-    const [hover, setHover] = useState(false);
-
+const Button: React.FC<ButtonProps> = ({ children, text, icon, theme = "start", next = false, ...buttonProps }) => {
     return (
-        <button {...buttonProps} className={`button ${theme}`} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <button {...buttonProps} className={`button ${theme}`}>
             {children || text}
 
-            {next && theme === 'start' &&
-                <img src={angleRight} alt="" />
-            }
-
-            {theme === 'cancel' &&
-                <img src={hover ? cancelIconWhite : cancelIcon} alt="" />
+            {icon &&
+                <img src={icon} alt="" />
             }
         </button>
     );

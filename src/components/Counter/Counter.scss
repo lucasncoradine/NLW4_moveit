@@ -1,34 +1,55 @@
-@import '../../styles/system.scss';
+@import "../../styles/system.scss";
 
 #counter {
-    display: flex;
-    font-family: "Rajdhani";
-    font-size: 120px;
-    color: $titulo;
-
-    .minutes,
-    .seconds {
+    .counter-container {
         display: flex;
-        justify-content: center;
-        background-color: $white;
-        border-radius: $border-radius;
-        width: 176px;
+        font-family: "Rajdhani";
+        font-size: 120px;
+        color: $titulo;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
 
-        span {            
-            width: 50%;
-            text-align: center;
+        .minutes,
+        .seconds {
+            display: flex;
+            justify-content: center;
+            background-color: $white;
+            border-radius: $border-radius;
+            width: 176px;
 
-            & + span {
-                border-left: 3px solid $background;
+            span {
+                width: 50%;
+                text-align: center;
+
+                & + span {
+                    border-left: 3px solid $background;
+                }
             }
+        }
+
+        .minutes {
+            margin-right: 0.8rem;
+        }
+
+        .seconds {
+            margin-left: 0.8rem;
         }
     }
 
-    .minutes {
-        margin-right: .8rem;
-    }
+    .button-container {
+        position: relative;
+        margin-top: 36px;
+        height: 80px;
 
-    .seconds {
-        margin-left: .8rem;
+        .button-progress-bar {
+            position: absolute;
+            bottom: 0px;
+            border-radius: $border-radius;
+            height: 4px;
+            @include transition(width, 1s, ease-out);
+
+            background-color: $green;
+        }
     }
 }
